@@ -1,0 +1,16 @@
+C:\Users\valen\O-O-P\ResumeConverter\ResumeConverter\ResumeConverter\bin\Debug\ResumeConverter.exe.config
+C:\Users\valen\O-O-P\ResumeConverter\ResumeConverter\ResumeConverter\bin\Debug\ResumeConverter.exe
+C:\Users\valen\O-O-P\ResumeConverter\ResumeConverter\ResumeConverter\bin\Debug\ResumeConverter.pdb
+C:\Users\valen\O-O-P\ResumeConverter\ResumeConverter\ResumeConverter\bin\Debug\Newtonsoft.Json.dll
+C:\Users\valen\O-O-P\ResumeConverter\ResumeConverter\ResumeConverter\bin\Debug\Newtonsoft.Json.xml
+C:\Users\valen\O-O-P\ResumeConverter\ResumeConverter\ResumeConverter\obj\Debug\ResumeConverter.csprojAssemblyReference.cache
+C:\Users\valen\O-O-P\ResumeConverter\ResumeConverter\ResumeConverter\obj\Debug\ResumeConverter.Form1.resources
+C:\Users\valen\O-O-P\ResumeConverter\ResumeConverter\ResumeConverter\obj\Debug\ResumeConverter.Properties.Resources.resources
+C:\Users\valen\O-O-P\ResumeConverter\ResumeConverter\ResumeConverter\obj\Debug\ResumeConverter.csproj.GenerateResource.cache
+C:\Users\valen\O-O-P\ResumeConverter\ResumeConverter\ResumeConverter\obj\Debug\ResumeConverter.csproj.CoreCompileInputs.cache
+C:\Users\valen\O-O-P\ResumeConverter\ResumeConverter\ResumeConverter\obj\Debug\ResumeConverter.csproj.CopyComplete
+C:\Users\valen\O-O-P\ResumeConverter\ResumeConverter\ResumeConverter\obj\Debug\ResumeConverter.exe
+C:\Users\valen\O-O-P\ResumeConverter\ResumeConverter\ResumeConverter\obj\Debug\ResumeConverter.pdb
+C:\Users\valen\O-O-P\ResumeConverter\ResumeConverter\ResumeConverter\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\valen\O-O-P\ResumeConverter\ResumeConverter\ResumeConverter\bin\Debug\itextsharp.dll
+C:\Users\valen\O-O-P\ResumeConverter\ResumeConverter\ResumeConverter\bin\Debug\itextsharp.xml
