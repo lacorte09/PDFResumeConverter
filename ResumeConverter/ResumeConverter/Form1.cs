@@ -29,7 +29,7 @@ namespace ResumeConverter
             try
             {
                 string jsonReadFile;
-                var readMe = new StreamReader(@"C:\Users\valen\O-O-P\ResumeConverter\Resume.json");              
+                var readMe = new StreamReader(@"C:\Users\dillon\source\repos\PDFResumeConverter\Resume.json");              
                 {
                     jsonReadFile = readMe.ReadToEnd();
                     jsonHere1.Text = jsonReadFile;
@@ -46,10 +46,14 @@ namespace ResumeConverter
         private void kahitAnoMuna2_Click(object sender, EventArgs e)
         {
             Document docx = new Document();
-            PdfWriter.GetInstance(docx, new FileStream(@"C:\Users\valen\O-O-P\ResumeConverter\Resume.pdf", FileMode.Create));
+            PdfWriter.GetInstance(docx, new FileStream(@"C:\Users\dillon\source\repos\PDFResumeConverter\Resume.pdf", FileMode.Create));
             docx.Open();
-            Paragraph par1 = new Paragraph(jsonHere1.Text);
+            iTextSharp.text.Font fontStyle = FontFactory.GetFont("Times New Roman", 50, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#00FFFF")));
+            iTextSharp.text.Font fontStyle2 = FontFactory.GetFont("Times New Roman", 10, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#000000")));
+            Paragraph par1 = new Paragraph("•" + jsonHere1.Text, fontStyle);
+            Paragraph par2 = new Paragraph("•" + jsonHere2.Text, fontStyle2);
             docx.Add(par1);
+            docx.Add(par2);
             docx.Close();
             
         }
