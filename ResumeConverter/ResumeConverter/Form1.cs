@@ -32,7 +32,7 @@ namespace ResumeConverter
                 var readMe = new StreamReader(@"C:\Users\dillon\source\repos\PDFResumeConverter\Resume.json");              
                 {
                     jsonReadFile = readMe.ReadToEnd();
-                    jsonHere1.Text = jsonReadFile;
+                    nameHere.Text = jsonReadFile;
 
                 }
                 
@@ -48,14 +48,19 @@ namespace ResumeConverter
             Document docx = new Document();
             PdfWriter.GetInstance(docx, new FileStream(@"C:\Users\dillon\source\repos\PDFResumeConverter\Resume.pdf", FileMode.Create));
             docx.Open();
-            iTextSharp.text.Font fontStyle = FontFactory.GetFont("Times New Roman", 50, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#00FFFF")));
-            iTextSharp.text.Font fontStyle2 = FontFactory.GetFont("Times New Roman", 10, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#000000")));
-            Paragraph par1 = new Paragraph("•" + jsonHere1.Text, fontStyle);
-            Paragraph par2 = new Paragraph("•" + jsonHere2.Text, fontStyle2);
+            Chunk lineChunk = new Chunk("______________________________________________________________________________");
+            Paragraph par1 = new Paragraph(nameHere.Text, FontFactory.GetFont("Times New Roman", 30, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#000000"))));
+            Paragraph par2 = new Paragraph("Education", FontFactory.GetFont("Times New Roman", 20, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#000000"))));
+            Paragraph par3 = new Paragraph(educationHere.Text, FontFactory.GetFont("Times New Roman", 10, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#000000"))));
+
+
             docx.Add(par1);
+            docx.Add(lineChunk);
             docx.Add(par2);
+            docx.Add(par3);
             docx.Close();
             
         }
+
     }
 }

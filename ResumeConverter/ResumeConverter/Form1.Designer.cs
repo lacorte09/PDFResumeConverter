@@ -28,33 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.jsonHere1 = new System.Windows.Forms.TextBox();
-            this.readKita1 = new System.Windows.Forms.Button();
+            this.nameHere = new System.Windows.Forms.TextBox();
+            this.readerbtn1 = new System.Windows.Forms.Button();
             this.generateKita2 = new System.Windows.Forms.Button();
-            this.jsonHere2 = new System.Windows.Forms.TextBox();
+            this.educationHere = new System.Windows.Forms.TextBox();
+            this.contactHere = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // jsonHere1
+            // nameHere
             // 
-            this.jsonHere1.Location = new System.Drawing.Point(97, 60);
-            this.jsonHere1.Multiline = true;
-            this.jsonHere1.Name = "jsonHere1";
-            this.jsonHere1.Size = new System.Drawing.Size(192, 55);
-            this.jsonHere1.TabIndex = 0;
+            this.nameHere.Location = new System.Drawing.Point(97, 76);
+            this.nameHere.Multiline = true;
+            this.nameHere.Name = "nameHere";
+            this.nameHere.Size = new System.Drawing.Size(192, 55);
+            this.nameHere.TabIndex = 0;
             // 
-            // readKita1
+            // readerbtn1
             // 
-            this.readKita1.Location = new System.Drawing.Point(97, 31);
-            this.readKita1.Name = "readKita1";
-            this.readKita1.Size = new System.Drawing.Size(75, 23);
-            this.readKita1.TabIndex = 2;
-            this.readKita1.Text = "button1";
-            this.readKita1.UseVisualStyleBackColor = true;
-            this.readKita1.Click += new System.EventHandler(this.readKita1_Click);
+            this.readerbtn1.Location = new System.Drawing.Point(97, 31);
+            this.readerbtn1.Name = "readerbtn1";
+            this.readerbtn1.Size = new System.Drawing.Size(99, 23);
+            this.readerbtn1.TabIndex = 2;
+            this.readerbtn1.Text = "Read Json File";
+            this.readerbtn1.UseVisualStyleBackColor = true;
+            this.readerbtn1.Click += new System.EventHandler(this.readKita1_Click);
             // 
             // generateKita2
             // 
-            this.generateKita2.Location = new System.Drawing.Point(178, 31);
+            this.generateKita2.Location = new System.Drawing.Point(302, 31);
             this.generateKita2.Name = "generateKita2";
             this.generateKita2.Size = new System.Drawing.Size(75, 23);
             this.generateKita2.TabIndex = 3;
@@ -62,23 +63,32 @@
             this.generateKita2.UseVisualStyleBackColor = true;
             this.generateKita2.Click += new System.EventHandler(this.kahitAnoMuna2_Click);
             // 
-            // jsonHere2
+            // educationHere
             // 
-            this.jsonHere2.Location = new System.Drawing.Point(97, 121);
-            this.jsonHere2.Multiline = true;
-            this.jsonHere2.Name = "jsonHere2";
-            this.jsonHere2.Size = new System.Drawing.Size(192, 61);
-            this.jsonHere2.TabIndex = 4;
+            this.educationHere.Location = new System.Drawing.Point(97, 149);
+            this.educationHere.Multiline = true;
+            this.educationHere.Name = "educationHere";
+            this.educationHere.Size = new System.Drawing.Size(192, 61);
+            this.educationHere.TabIndex = 4;
+            // 
+            // contactHere
+            // 
+            this.contactHere.Location = new System.Drawing.Point(489, 149);
+            this.contactHere.Multiline = true;
+            this.contactHere.Name = "contactHere";
+            this.contactHere.Size = new System.Drawing.Size(192, 61);
+            this.contactHere.TabIndex = 5;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 502);
-            this.Controls.Add(this.jsonHere2);
+            this.Controls.Add(this.contactHere);
+            this.Controls.Add(this.educationHere);
             this.Controls.Add(this.generateKita2);
-            this.Controls.Add(this.readKita1);
-            this.Controls.Add(this.jsonHere1);
+            this.Controls.Add(this.readerbtn1);
+            this.Controls.Add(this.nameHere);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -88,10 +98,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox jsonHere1;
-        private System.Windows.Forms.Button readKita1;
+        private System.Windows.Forms.TextBox nameHere;
+        private System.Windows.Forms.Button readerbtn1;
         private System.Windows.Forms.Button generateKita2;
-        private System.Windows.Forms.TextBox jsonHere2;
+        private System.Windows.Forms.TextBox educationHere;
+        private System.Windows.Forms.TextBox contactHere;
     }
 }
 
