@@ -23,10 +23,10 @@ C:\Users\dillon\source\repos\PDFResumeConverter\ResumeConverter\ResumeConverter\
 C:\Users\dillon\source\repos\PDFResumeConverter\ResumeConverter\ResumeConverter\bin\Debug\itextsharp.xml
 C:\Users\dillon\source\repos\PDFResumeConverter\ResumeConverter\ResumeConverter\bin\Debug\Newtonsoft.Json.xml
 C:\Users\dillon\source\repos\PDFResumeConverter\ResumeConverter\ResumeConverter\obj\Debug\ResumeConverter.csprojAssemblyReference.cache
-C:\Users\dillon\source\repos\PDFResumeConverter\ResumeConverter\ResumeConverter\obj\Debug\ResumeConverter.Form1.resources
 C:\Users\dillon\source\repos\PDFResumeConverter\ResumeConverter\ResumeConverter\obj\Debug\ResumeConverter.Properties.Resources.resources
 C:\Users\dillon\source\repos\PDFResumeConverter\ResumeConverter\ResumeConverter\obj\Debug\ResumeConverter.csproj.GenerateResource.cache
 C:\Users\dillon\source\repos\PDFResumeConverter\ResumeConverter\ResumeConverter\obj\Debug\ResumeConverter.csproj.CoreCompileInputs.cache
 C:\Users\dillon\source\repos\PDFResumeConverter\ResumeConverter\ResumeConverter\obj\Debug\ResumeConverter.csproj.CopyComplete
 C:\Users\dillon\source\repos\PDFResumeConverter\ResumeConverter\ResumeConverter\obj\Debug\ResumeConverter.exe
 C:\Users\dillon\source\repos\PDFResumeConverter\ResumeConverter\ResumeConverter\obj\Debug\ResumeConverter.pdb
+C:\Users\dillon\source\repos\PDFResumeConverter\ResumeConverter\ResumeConverter\obj\Debug\ResumeConverter.Resume.resources
