@@ -17,7 +17,7 @@ using iTextSharp.text.pdf;
 namespace ResumeConverter
 {
 
-    public partial class Form1 : Form
+    public partial class PDFConverter : Form
     {
         public class Resume
         {
@@ -52,16 +52,28 @@ namespace ResumeConverter
             public string Achievement3 { get; set; }
             public string Achievement4 { get; set; }
         }        
-        public Form1()
+        public PDFConverter()
         {
             InitializeComponent();
+        }
+        public void reset()
+        {
+            nameHere.Text = "";
+            personalInfoHere.Text = "";
+            summaryHere.Text = "";
+            educationHere.Text = "";
+            skillsHere.Text = "";
+            experienceHere.Text = "";
+            jsonClone.Text = "";
+            achievementsHere.Text = "";
+            namePDF.Text = "";
         }
 
         private void readKita1_Click(object sender, EventArgs e)
         {
             try
             {
-                var pathOfJSONFile = @"C:\Users\dillon\O-O-P\PDFResCon\ResumeConverter\ResumeConverter\resume.json";
+                var pathOfJSONFile = @"C:\Users\valen\source\repos\PDFResumeConverter\ResumeConverter\ResumeConverter\resume.json";
                 string jsonReadFile = File.ReadAllText(pathOfJSONFile);
                 Resume convert = JsonConvert.DeserializeObject<Resume>(jsonReadFile);
                 nameHere.Text = convert.Name;
@@ -76,44 +88,67 @@ namespace ResumeConverter
             }
             catch (Exception)
             {
-
+                MessageBox.Show("No files detected", "Error!");
             }
 
         }
 
         private void kahitAnoMuna2_Click(object sender, EventArgs e)
         {
-            Document docx = new Document();
-            PdfWriter.GetInstance(docx, new FileStream(@"C:\Users\dillon\O-O-P\PDFResCon\Resume.pdf", FileMode.Create));
-            docx.Open();
-            Chunk lineC = new Chunk("______________________________________________________________________________");
-            Paragraph name = new Paragraph(nameHere.Text, FontFactory.GetFont("Times New Roman", 25, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#000000"))));
-            Paragraph educ = new Paragraph("Education", FontFactory.GetFont("Times New Roman", 20, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#000000"))));
-            Paragraph sum = new Paragraph(summaryHere.Text, FontFactory.GetFont("Times New Roman", 10, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#000000"))));
-            Paragraph perin = new Paragraph(personalInfoHere.Text, FontFactory.GetFont("Times New Roman", 8, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#000000"))));
-            Paragraph edu = new Paragraph(educationHere.Text, FontFactory.GetFont("Times New Roman", 12, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#000000"))));
-            Paragraph skills = new Paragraph("Skills", FontFactory.GetFont("Times New Roman", 20, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#000000"))));
-            Paragraph skill = new Paragraph(skillsHere.Text, FontFactory.GetFont("Times New Roman", 12, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#000000"))));
-            Paragraph exps = new Paragraph("Experience", FontFactory.GetFont("Times New Roman", 20, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#000000"))));
-            Paragraph exp = new Paragraph(experienceHere.Text, FontFactory.GetFont("Times New Roman", 12, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#000000"))));
-            Paragraph achivs = new Paragraph("Achievements", FontFactory.GetFont("Times New Roman", 20, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#000000"))));
-            Paragraph achiv = new Paragraph(achievementsHere.Text, FontFactory.GetFont("Times New Roman", 12, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#000000"))));
-            docx.Add(name);
-            docx.Add(perin);
-            docx.Add(sum);
-            docx.Add(lineC);
-            docx.Add(educ);
-            docx.Add(edu);
-            docx.Add(lineC);
-            docx.Add(skills);
-            docx.Add(skill);
-            docx.Add(lineC);
-            docx.Add(exps);
-            docx.Add(exp);
-            docx.Add(lineC);
-            docx.Add(achivs);
-            docx.Add(achiv);
-            docx.Close();        
+            if (namePDF.Text == null || namePDF.Text == "")
+            {
+                MessageBox.Show("Name of File is Required!", "Error!");
+                return;
+            }
+            else
+            {
+                Document docx = new Document();
+                PdfWriter.GetInstance(docx, new FileStream(@"C:\Users\valen\source\repos\PDFResumeConverter\" + namePDF.Text + ".pdf", FileMode.Create));
+                docx.Open();
+                Chunk lineC = new Chunk("______________________________________________________________________________");
+                Paragraph name = new Paragraph(nameHere.Text, FontFactory.GetFont("Times New Roman", 25, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#000000"))));
+                Paragraph educ = new Paragraph("Education", FontFactory.GetFont("Times New Roman", 20, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#000000"))));
+                Paragraph sum = new Paragraph(summaryHere.Text, FontFactory.GetFont("Times New Roman", 10, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#000000"))));
+                Paragraph perin = new Paragraph(personalInfoHere.Text, FontFactory.GetFont("Times New Roman", 8, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#000000"))));
+                Paragraph edu = new Paragraph(educationHere.Text, FontFactory.GetFont("Times New Roman", 12, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#000000"))));
+                Paragraph skills = new Paragraph("Skills", FontFactory.GetFont("Times New Roman", 20, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#000000"))));
+                Paragraph skill = new Paragraph(skillsHere.Text, FontFactory.GetFont("Times New Roman", 12, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#000000"))));
+                Paragraph exps = new Paragraph("Experience", FontFactory.GetFont("Times New Roman", 20, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#000000"))));
+                Paragraph exp = new Paragraph(experienceHere.Text, FontFactory.GetFont("Times New Roman", 12, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#000000"))));
+                Paragraph achivs = new Paragraph("Achievements", FontFactory.GetFont("Times New Roman", 20, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#000000"))));
+                Paragraph achiv = new Paragraph(achievementsHere.Text, FontFactory.GetFont("Times New Roman", 12, new iTextSharp.text.BaseColor(System.Drawing.ColorTranslator.FromHtml("#000000"))));
+                perin.Alignment = Element.ALIGN_RIGHT;
+                edu.Alignment = Element.ALIGN_CENTER;
+                skill.Alignment = Element.ALIGN_CENTER;
+                exp.Alignment = Element.ALIGN_CENTER;
+                achiv.Alignment = Element.ALIGN_CENTER;
+                docx.Add(name);
+                docx.Add(perin);
+                docx.Add(sum);
+                docx.Add(lineC);
+                docx.Add(educ);
+                docx.Add(edu);
+                docx.Add(lineC);
+                docx.Add(skills);
+                docx.Add(skill);
+                docx.Add(lineC);
+                docx.Add(exps);
+                docx.Add(exp);
+                docx.Add(lineC);
+                docx.Add(achivs);
+                docx.Add(achiv);
+                docx.Close();
+                MessageBox.Show("File GEnerated", "Success!");
+                reset();
+            }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var pathOfJSONFile = @"C:\Users\valen\source\repos\PDFResumeConverter\ResumeConverter\ResumeConverter\resume.json";
+            string jsonReadFile = File.ReadAllText(pathOfJSONFile);
+            jsonClone.Text = jsonReadFile;
+        }
+
     }
 }
