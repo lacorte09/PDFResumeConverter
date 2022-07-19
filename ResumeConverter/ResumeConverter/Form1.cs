@@ -19,6 +19,11 @@ namespace ResumeConverter
 
     public partial class PDFConverter : Form
     {
+                
+        public PDFConverter()
+        {
+            InitializeComponent();
+        }
         public class Resume
         {
             public string Name { get; set; }
@@ -51,10 +56,6 @@ namespace ResumeConverter
             public string Achievement2 { get; set; }
             public string Achievement3 { get; set; }
             public string Achievement4 { get; set; }
-        }        
-        public PDFConverter()
-        {
-            InitializeComponent();
         }
         public void reset()
         {
