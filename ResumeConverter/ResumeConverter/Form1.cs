@@ -138,7 +138,7 @@ namespace ResumeConverter
                 docx.Add(achivs);
                 docx.Add(achiv);
                 docx.Close();
-                MessageBox.Show("File GEnerated", "Success!");
+                MessageBox.Show("File Generated", "Success!");
                 reset();
             }
         }
